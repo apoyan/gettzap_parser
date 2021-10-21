@@ -13,8 +13,6 @@ module Products
       data[:brand].downcase!
       data[:code].downcase!
 
-      context.fail! if data.slice(:name).any? { |_, v| v.empty? }
-
       context.data = data
     end
   end
